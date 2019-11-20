@@ -469,7 +469,7 @@
     <hop>
       <from>replace special chars</from>
       <to>HAS_GENRE out 2</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>no special chars?</from>
@@ -484,7 +484,7 @@
     <hop>
       <from>D</from>
       <to>HAS_GENRE out 2</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
   </order>
   <step>
@@ -528,7 +528,7 @@
     <key />
     <create_indexes>Y</create_indexes>
     <use_create>N</use_create>
-    <only_create_relationships>N</only_create_relationships>
+    <only_create_relationships>Y</only_create_relationships>
     <returning_graph>N</returning_graph>
     <return_graph_field>graph</return_graph_field>
     <from>
