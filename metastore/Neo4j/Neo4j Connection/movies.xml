@@ -6,12 +6,12 @@
    <children>
       <child>
          <id>server</id>
-         <value>localhost</value>
+         <value>${MOVIES_HOST}</value>
          <type>String</type>
       </child>
       <child>
          <id>browserPort</id>
-         <value></value>
+         <value>${MOVIES_BOLT}</value>
          <type>String</type>
       </child>
       <child>
@@ -41,12 +41,12 @@
       </child>
       <child>
          <id>routing</id>
-         <value>N</value>
+         <value>Y</value>
          <type>String</type>
       </child>
       <child>
          <id>password</id>
-         <value>a25vd2Jp</value>
+         <value>JHtNT1ZJRVNfUEFTU30=</value>
          <type>String</type>
       </child>
       <child>
@@ -71,7 +71,7 @@
       </child>
       <child>
          <id>username</id>
-         <value>neo4j</value>
+         <value>${MOVIES_USER}</value>
          <type>String</type>
       </child>
       <child>
