@@ -321,31 +321,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>451</xloc>
-      <yloc>96</yloc>
-      <attributes_kjc />
-    </entry>
-    <entry>
-      <name>remodel phase 2</name>
-      <description />
-      <type>NEO4J_CYPHER_SCRIPT</type>
-      <attributes />
-      <connection>movies</connection>
-      <script>MATCH (m:Movie)-[hg:HAS_GENRE]->(g:Genre)
-CALL apoc.create.addLabels( id(m), [ g.name ] ) YIELD node
-RETURN count(*)
-;
-
-MATCH (g:Genre)
-DETACH DELETE g
-;
-
-</script>
-      <replace_variables>N</replace_variables>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>953</xloc>
+      <xloc>442</xloc>
       <yloc>96</yloc>
       <attributes_kjc />
     </entry>
@@ -357,7 +333,7 @@ DETACH DELETE g
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1455</xloc>
+      <xloc>926</xloc>
       <yloc>96</yloc>
       <attributes_kjc />
     </entry>
@@ -381,24 +357,7 @@ REMOVE m.genres
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>702</xloc>
-      <yloc>96</yloc>
-      <attributes_kjc />
-    </entry>
-    <entry>
-      <name>drop constraint</name>
-      <description />
-      <type>NEO4J_CYPHER_SCRIPT</type>
-      <attributes />
-      <connection>movies</connection>
-      <script>DROP CONSTRAINT ON (g:Genre) ASSERT g.name IS UNIQUE
-;
-</script>
-      <replace_variables>N</replace_variables>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>1204</xloc>
+      <xloc>684</xloc>
       <yloc>96</yloc>
       <attributes_kjc />
     </entry>
@@ -424,24 +383,6 @@ REMOVE m.genres
     </hop>
     <hop>
       <from>remodel genres</from>
-      <to>remodel phase 2</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>remodel phase 2</from>
-      <to>drop constraint</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>drop constraint</from>
       <to>Success</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
