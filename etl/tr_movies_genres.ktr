@@ -469,7 +469,7 @@
     <hop>
       <from>replace special chars</from>
       <to>HAS_GENRE out 2</to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
     </hop>
     <hop>
       <from>no special chars?</from>
@@ -484,7 +484,7 @@
     <hop>
       <from>D</from>
       <to>HAS_GENRE out 2</to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
     </hop>
   </order>
   <step>
