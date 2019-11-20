@@ -524,7 +524,7 @@ CREATE INDEX ON :Movie(title)
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1696</xloc>
+      <xloc>1904</xloc>
       <yloc>96</yloc>
       <attributes_kjc />
     </entry>
@@ -545,7 +545,7 @@ set r.characters = split(r.characters, ':')
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1536</xloc>
+      <xloc>1632</xloc>
       <yloc>96</yloc>
       <attributes_kjc />
     </entry>
