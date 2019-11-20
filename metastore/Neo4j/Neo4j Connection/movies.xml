@@ -6,12 +6,12 @@
    <children>
       <child>
          <id>server</id>
-         <value>localhost</value>
+         <value>f8aa991e.databases.neo4j.io</value>
          <type>String</type>
       </child>
       <child>
          <id>browserPort</id>
-         <value></value>
+         <value>7474</value>
          <type>String</type>
       </child>
       <child>
@@ -41,12 +41,12 @@
       </child>
       <child>
          <id>routing</id>
-         <value>N</value>
+         <value>Y</value>
          <type>String</type>
       </child>
       <child>
          <id>password</id>
-         <value>a25vd2Jp</value>
+         <value>YTJXMFZoSktJUXBqZVV3eFdrZ0RrSDVuUWowbTJJX05raUlaSEZDRmd0VQ==</value>
          <type>String</type>
       </child>
       <child>
