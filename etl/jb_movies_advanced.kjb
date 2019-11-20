@@ -334,7 +334,7 @@ wget -c http://data.neo4j.com/advanced/movies/actors.csv </script>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>392</xloc>
+      <xloc>405</xloc>
       <yloc>96</yloc>
       <attributes_kjc />
     </entry>
@@ -360,7 +360,7 @@ CREATE INDEX ON :Movie(title)
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>584</xloc>
+      <xloc>610</xloc>
       <yloc>96</yloc>
       <attributes_kjc />
     </entry>
@@ -398,7 +398,7 @@ CREATE INDEX ON :Movie(title)
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>776</xloc>
+      <xloc>815</xloc>
       <yloc>96</yloc>
       <attributes_kjc />
     </entry>
@@ -436,7 +436,7 @@ CREATE INDEX ON :Movie(title)
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1184</xloc>
+      <xloc>1020</xloc>
       <yloc>96</yloc>
       <attributes_kjc />
     </entry>
@@ -474,7 +474,7 @@ CREATE INDEX ON :Movie(title)
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1376</xloc>
+      <xloc>1225</xloc>
       <yloc>96</yloc>
       <attributes_kjc />
     </entry>
@@ -512,7 +512,7 @@ CREATE INDEX ON :Movie(title)
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1568</xloc>
+      <xloc>1430</xloc>
       <yloc>96</yloc>
       <attributes_kjc />
     </entry>
@@ -524,66 +524,24 @@ CREATE INDEX ON :Movie(title)
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>2144</xloc>
+      <xloc>1840</xloc>
       <yloc>96</yloc>
       <attributes_kjc />
     </entry>
     <entry>
-      <name>genres, characters to arrays</name>
+      <name>characters to arrays</name>
       <description />
       <type>NEO4J_CYPHER_SCRIPT</type>
       <attributes />
       <connection>movies</connection>
-      <script>//MATCH (n:Movie)
-//SET n.genres= split(n.genres, ':')
-//;
-
-match(n:Movie)-[r:ACTED_IN]-(a:Person) 
+      <script>match(n:Movie)-[r:ACTED_IN]-(a:Person) 
 set r.characters = split(r.characters, ':')
 ;</script>
       <replace_variables>N</replace_variables>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1824</xloc>
-      <yloc>96</yloc>
-      <attributes_kjc />
-    </entry>
-    <entry>
-      <name>movie -> genre</name>
-      <description />
-      <type>TRANS</type>
-      <attributes />
-      <specification_method>filename</specification_method>
-      <trans_object_id />
-      <filename>${ENVIRONMENT_HOME}/etl/tr_movies_genres.ktr</filename>
-      <transname />
-      <arg_from_previous>N</arg_from_previous>
-      <params_from_previous>N</params_from_previous>
-      <exec_per_row>N</exec_per_row>
-      <clear_rows>N</clear_rows>
-      <clear_files>N</clear_files>
-      <set_logfile>N</set_logfile>
-      <logfile />
-      <logext />
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <loglevel>Basic</loglevel>
-      <cluster>N</cluster>
-      <slave_server_name />
-      <set_append_logfile>N</set_append_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <follow_abort_remote>N</follow_abort_remote>
-      <create_parent_folder>N</create_parent_folder>
-      <logging_remote_work>N</logging_remote_work>
-      <run_configuration>Pentaho local</run_configuration>
-      <parameters>
-        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>976</xloc>
+      <xloc>1635</xloc>
       <yloc>96</yloc>
       <attributes_kjc />
     </entry>
@@ -636,7 +594,7 @@ set r.characters = split(r.characters, ':')
     </hop>
     <hop>
       <from>actors</from>
-      <to>genres, characters to arrays</to>
+      <to>characters to arrays</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -644,7 +602,7 @@ set r.characters = split(r.characters, ':')
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>genres, characters to arrays</from>
+      <from>characters to arrays</from>
       <to>Success</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -654,15 +612,6 @@ set r.characters = split(r.characters, ':')
     </hop>
     <hop>
       <from>movies</from>
-      <to>movie -> genre</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>movie -> genre</from>
       <to>people</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
