@@ -41,7 +41,7 @@
       </child>
       <child>
          <id>routing</id>
-         <value>Y</value>
+         <value>N</value>
          <type>String</type>
       </child>
       <child>
