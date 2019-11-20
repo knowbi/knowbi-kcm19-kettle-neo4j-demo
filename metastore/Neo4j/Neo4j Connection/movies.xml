@@ -6,7 +6,7 @@
    <children>
       <child>
          <id>server</id>
-         <value>f8aa991e.databases.neo4j.io</value>
+         <value>${MOVIES_HOST}</value>
          <type>String</type>
       </child>
       <child>
@@ -31,7 +31,7 @@
       </child>
       <child>
          <id>boltPort</id>
-         <value>7687</value>
+         <value>${MOVIES_BOLT}</value>
          <type>String</type>
       </child>
       <child>
@@ -46,7 +46,7 @@
       </child>
       <child>
          <id>password</id>
-         <value>YTJXMFZoSktJUXBqZVV3eFdrZ0RrSDVuUWowbTJJX05raUlaSEZDRmd0VQ==</value>
+         <value>JHtNT1ZJRVNfUEFTU30=</value>
          <type>String</type>
       </child>
       <child>
@@ -71,7 +71,7 @@
       </child>
       <child>
          <id>username</id>
-         <value>neo4j</value>
+         <value>${MOVIES_USER}</value>
          <type>String</type>
       </child>
       <child>
