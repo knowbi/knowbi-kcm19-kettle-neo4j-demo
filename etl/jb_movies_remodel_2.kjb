@@ -316,7 +316,7 @@
       <attributes />
       <connection>movies</connection>
       <script>MATCH (m:Movie)-[hg:HAS_GENRE]->(g:Genre)
-CALL apoc.create.addLabels( id(m), [ g.name ] ) YIELD node
+CALL apoc.create.addLabels( id(m), [ replace(replace(g.name, ' ', ''), '-', '') ] ) YIELD node
 RETURN count(*)
 ;
 
